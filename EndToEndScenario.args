@@ -1,0 +1,139 @@
+[main]
+
+
+################################################################################
+#                                                                              #
+#                                  CreateCustomer                              #
+#                                                                              #
+################################################################################
+
+CreateCustomer.endpoint                          = API_URL
+CreateCustomer.path                              = /customers
+CreateCustomer.payload                           = CreateCustomer.json
+
+CreateCustomer.response.dataArea.alerts.alertId         =:jpath  $.dataArea.alerts[alertId]
+CreateCustomer.response.responseCode             =:jpath $.response.responseCode
+CreateCustomer.response.responseStatus           =:jpath $.response.responseStatus
+CreateCustomer.response.responseDescription      =:jpath $.response.responseDescription
+
+
+
+################################################################################
+#                                                                              #
+#                         CreateCustomerInvalidParameter                     #
+#                                                                              #
+################################################################################
+
+CreateCustomerInvalidParameter.endpoint                          = API_URL
+CreateCustomerInvalidParameter.path                              = /customers
+
+CreateCustomerInvalidParameter.payload                           = CreateCustomer.json
+
+CreateCustomerInvalidParameter.response.responseCode         =:jpath $.response.responseCode
+CreateCustomerInvalidParameter.response.responseStatus       =:jpath $.response.responseStatus
+CreateCustomerInvalidParameter.response.responseDescription  =:jpath $.response.responseDescription
+
+################################################################################
+#                                                                              #
+#                           CreateCustomerBadRequest                         #
+#                                                                              #
+################################################################################
+
+CreateCustomerBadRequest.endpoint                          = API_URL
+CreateCustomerBadRequest.path                              = /customers
+
+CreateCustomerBadRequest.payload                           = CreateCustomer.json
+
+CreateCustomerBadRequest.response.status               =:jpath $.response.status
+CreateCustomerBadRequest.response.error                =:jpath $.response.responseStatus
+CreateCustomerBadRequest.response.message              =:jpath $.response.responseDescription
+
+
+################################################################################
+#                                                                              #
+#                                  GetConfigFiles                              #
+#                                                                              #
+################################################################################
+
+GetConfigFiles.endpoint                          = API_URL
+GetConfigFiles.path                              = /tenants/${id}/config
+
+GetConfigFiles.response.dataArea.alerts.alertId         =:jpath  $.dataArea.alerts[alertId]
+GetConfigFiles.response.responseCode             =:jpath $.response.responseCode
+GetConfigFiles.response.responseStatus           =:jpath $.response.responseStatus
+GetConfigFiles.response.responseDescription      =:jpath $.response.responseDescription
+
+
+
+################################################################################
+#                                                                              #
+#                         GetConfigFilesInvalidParameter                     #
+#                                                                              #
+################################################################################
+
+GetConfigFilesInvalidParameter.endpoint                          = API_URL
+GetConfigFilesInvalidParameter.path                              = /tenants/${id}/config
+
+GetConfigFilesInvalidParameter.response.responseCode         =:jpath $.response.responseCode
+GetConfigFilesInvalidParameter.response.responseStatus       =:jpath $.response.responseStatus
+GetConfigFilesInvalidParameter.response.responseDescription  =:jpath $.response.responseDescription
+
+################################################################################
+#                                                                              #
+#                           GetConfigFilesBadRequest                           #
+#                                                                              #
+################################################################################
+
+GetConfigFilesBadRequest.endpoint                          = API_URL
+GetConfigFilesBadRequest.path                              = /tenants/${id}/config
+
+GetConfigFilesBadRequest.response.status               =:jpath $.response.status
+GetConfigFilesBadRequest.response.error                =:jpath $.response.responseStatus
+GetConfigFilesBadRequest.response.message              =:jpath $.response.responseDe
+
+################################################################################
+#                                                                              #
+#                                  UploadCustomer                              #
+#                                                                              #
+################################################################################
+
+UploadCustomer.endpoint                          = API_URL
+UploadCustomer.path                              = /customers/upload
+UploadCustomer.payload                           = UploadCustomer.json
+
+UploadCustomer.response.dataArea.alerts.alertId         =:jpath  $.dataArea.alerts[alertId]
+UploadCustomer.response.responseCode             =:jpath $.response.responseCode
+UploadCustomer.response.responseStatus           =:jpath $.response.responseStatus
+UploadCustomer.response.responseDescription      =:jpath $.response.responseDescription
+
+
+
+################################################################################
+#                                                                              #
+#                         UploadCustomerInvalidParameter                     #
+#                                                                              #
+################################################################################
+
+UploadCustomerInvalidParameter.endpoint                          = API_URL
+UploadCustomerInvalidParameter.path                              = /customers/upload
+
+UploadCustomerInvalidParameter.payload                           = UploadCustomer.json
+
+UploadCustomerInvalidParameter.response.responseCode         =:jpath $.response.responseCode
+UploadCustomerInvalidParameter.response.responseStatus       =:jpath $.response.responseStatus
+UploadCustomerInvalidParameter.response.responseDescription  =:jpath $.response.responseDescription
+
+################################################################################
+#                                                                              #
+#                           UploadCustomerBadRequest                         #
+#                                                                              #
+################################################################################
+
+UploadCustomerBadRequest.endpoint                          = API_URL
+UploadCustomerBadRequest.path                              = /customers/upload
+
+UploadCustomerBadRequest.payload                           = UploadCustomer.json
+
+UploadCustomerBadRequest.response.status               =:jpath $.response.status
+UploadCustomerBadRequest.response.error                =:jpath $.response.responseStatus
+UploadCustomerBadRequest.response.message              =:jpath $.response.responseDescription
