@@ -1,0 +1,29 @@
+################################################################################
+#                                                                              #
+#                                 GetConfigFiles                               #
+#                                                                              #
+################################################################################
+
+GetConfigFiles.response.responseCode         == "2000"
+GetConfigFiles.response.responseStatus       == "Success"
+GetConfigFiles.response.responseDescription  == "Successful Execution"
+
+################################################################################
+#                                                                              #
+#                         GetConfigFilesInvalidParameter                       #
+#                                                                              #
+################################################################################
+
+GetConfigFilesInvalidParameter.response.responseCode         == "1001"
+GetConfigFilesInvalidParameter.response.responseStatus       == "Invalid Request Parameters"
+GetConfigFilesInvalidParameter.response.responseDescription  == "Invalid Request Parameters: TransactionId field is empty or missing"
+
+################################################################################
+#                                                                              #
+#                           GetConfigFilesBadRequest                           #
+#                                                                              #
+################################################################################
+
+GetConfigFilesBadRequest.response.status               == "400"
+GetConfigFilesBadRequest.response.error                == "Bad Request"
+GetConfigFilesBadRequest.response.message              == "Bad Request"

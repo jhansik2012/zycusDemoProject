@@ -1,0 +1,49 @@
+[main]
+
+
+################################################################################
+#                                                                              #
+#                                  UploadCustomer                              #
+#                                                                              #
+################################################################################
+
+UploadCustomer.endpoint                          = API_URL
+UploadCustomer.path                              = /customers/upload
+UploadCustomer.payload                           = UploadCustomer.json
+
+UploadCustomer.response.dataArea.alerts.alertId         =:jpath  $.dataArea.alerts[alertId]
+UploadCustomer.response.responseCode             =:jpath $.response.responseCode
+UploadCustomer.response.responseStatus           =:jpath $.response.responseStatus
+UploadCustomer.response.responseDescription      =:jpath $.response.responseDescription
+
+
+
+################################################################################
+#                                                                              #
+#                         UploadCustomerInvalidParameter                     #
+#                                                                              #
+################################################################################
+
+UploadCustomerInvalidParameter.endpoint                          = API_URL
+UploadCustomerInvalidParameter.path                              = /customers/upload
+
+UploadCustomerInvalidParameter.payload                           = UploadCustomer.json
+
+UploadCustomerInvalidParameter.response.responseCode         =:jpath $.response.responseCode
+UploadCustomerInvalidParameter.response.responseStatus       =:jpath $.response.responseStatus
+UploadCustomerInvalidParameter.response.responseDescription  =:jpath $.response.responseDescription
+
+################################################################################
+#                                                                              #
+#                           UploadCustomerBadRequest                         #
+#                                                                              #
+################################################################################
+
+UploadCustomerBadRequest.endpoint                          = API_URL
+UploadCustomerBadRequest.path                              = /customers/upload
+
+UploadCustomerBadRequest.payload                           = UploadCustomer.json
+
+UploadCustomerBadRequest.response.status               =:jpath $.response.status
+UploadCustomerBadRequest.response.error                =:jpath $.response.responseStatus
+UploadCustomerBadRequest.response.message              =:jpath $.response.responseDescription

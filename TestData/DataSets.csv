@@ -1,0 +1,4 @@
+TESTCASE_NAME                              | API_URL																																| CUSTOMERID				| ADDRESS			| APPLICATION_NAME				| ORGANIZATION				| REGION				| SOURCE_NAME 				| TIME																										  |	TRANSACTIONID
+Create_Customer                            | http://vzt-hum-geofence-api.itest...in	| customer1					| address1		| appln1														| org1												| circle				| source1									| 2018-10-09T16:10:10.111+05:30			| trans1
+Upload_Customer                            | http://vzt-hum-geofence-api.itest...in	| customer1					| address1		| appln1														| org1												| circle				| source1									| 2018-10-09T16:10:10.111+05:30			| trans1
+Get_Config_Files                           | http://vzt-hum-geofence-api.itest...in	| 					| 		| 														| 												| 				| 									| 			|

@@ -1,0 +1,44 @@
+[main]
+
+
+################################################################################
+#                                                                              #
+#                                  GetConfigFiles                              #
+#                                                                              #
+################################################################################
+
+GetConfigFiles.endpoint                          = API_URL
+GetConfigFiles.path                              = /tenants/${id}/config
+
+GetConfigFiles.response.dataArea.alerts.alertId         =:jpath  $.dataArea.alerts[alertId]
+GetConfigFiles.response.responseCode             =:jpath $.response.responseCode
+GetConfigFiles.response.responseStatus           =:jpath $.response.responseStatus
+GetConfigFiles.response.responseDescription      =:jpath $.response.responseDescription
+
+
+
+################################################################################
+#                                                                              #
+#                         GetConfigFilesInvalidParameter                     #
+#                                                                              #
+################################################################################
+
+GetConfigFilesInvalidParameter.endpoint                          = API_URL
+GetConfigFilesInvalidParameter.path                              = /tenants/${id}/config
+
+GetConfigFilesInvalidParameter.response.responseCode         =:jpath $.response.responseCode
+GetConfigFilesInvalidParameter.response.responseStatus       =:jpath $.response.responseStatus
+GetConfigFilesInvalidParameter.response.responseDescription  =:jpath $.response.responseDescription
+
+################################################################################
+#                                                                              #
+#                           GetConfigFilesBadRequest                           #
+#                                                                              #
+################################################################################
+
+GetConfigFilesBadRequest.endpoint                          = API_URL
+GetConfigFilesBadRequest.path                              = /tenants/${id}/config
+
+GetConfigFilesBadRequest.response.status               =:jpath $.response.status
+GetConfigFilesBadRequest.response.error                =:jpath $.response.responseStatus
+GetConfigFilesBadRequest.response.message              =:jpath $.response.responseDescription

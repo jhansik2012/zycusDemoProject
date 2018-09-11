@@ -1,0 +1,14 @@
+{
+  "dataArea": {
+    "userId": "${CUSTOMERID}",
+    "vehicleId": "${ADDRESS}"
+  },
+"header": {
+    "applicationName": "${APPLICATION_NAME}",
+    "organization": "${ORGANIZATION}",
+    "region": "${REGION}",
+    "sourceName": "${SOURCE_NAME}",
+    "timestamp": "${TIME}",
+    "transactionId": "${TRANSACTIONID}"
+  }
+}

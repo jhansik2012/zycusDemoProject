@@ -1,0 +1,49 @@
+[main]
+
+
+################################################################################
+#                                                                              #
+#                                  CreateCustomer                              #
+#                                                                              #
+################################################################################
+
+CreateCustomer.endpoint                          = API_URL
+CreateCustomer.path                              = /customers
+CreateCustomer.payload                           = CreateCustomer.json
+
+CreateCustomer.response.dataArea.alerts.alertId         =:jpath  $.dataArea.alerts[alertId]
+CreateCustomer.response.responseCode             =:jpath $.response.responseCode
+CreateCustomer.response.responseStatus           =:jpath $.response.responseStatus
+CreateCustomer.response.responseDescription      =:jpath $.response.responseDescription
+
+
+
+################################################################################
+#                                                                              #
+#                         CreateCustomerInvalidParameter                     #
+#                                                                              #
+################################################################################
+
+CreateCustomerInvalidParameter.endpoint                          = API_URL
+CreateCustomerInvalidParameter.path                              = /customers
+
+CreateCustomerInvalidParameter.payload                           = CreateCustomer.json
+
+CreateCustomerInvalidParameter.response.responseCode         =:jpath $.response.responseCode
+CreateCustomerInvalidParameter.response.responseStatus       =:jpath $.response.responseStatus
+CreateCustomerInvalidParameter.response.responseDescription  =:jpath $.response.responseDescription
+
+################################################################################
+#                                                                              #
+#                           CreateCustomerBadRequest                         #
+#                                                                              #
+################################################################################
+
+CreateCustomerBadRequest.endpoint                          = API_URL
+CreateCustomerBadRequest.path                              = /customers
+
+CreateCustomerBadRequest.payload                           = CreateCustomer.json
+
+CreateCustomerBadRequest.response.status               =:jpath $.response.status
+CreateCustomerBadRequest.response.error                =:jpath $.response.responseStatus
+CreateCustomerBadRequest.response.message              =:jpath $.response.responseDescription

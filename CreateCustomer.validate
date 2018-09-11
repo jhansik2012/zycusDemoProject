@@ -1,0 +1,29 @@
+################################################################################
+#                                                                              #
+#                                 CreateCustomer                             #
+#                                                                              #
+################################################################################
+
+CreateCustomer.response.responseCode         == "2000"
+CreateCustomer.response.responseStatus       == "Success"
+CreateCustomer.response.responseDescription  == "Successful Execution"
+
+################################################################################
+#                                                                              #
+#                         CreateCustomerInvalidParameter                     #
+#                                                                              #
+################################################################################
+
+CreateCustomerInvalidParameter.response.responseCode         == "1001"
+CreateCustomerInvalidParameter.response.responseStatus       == "Invalid Request Parameters"
+CreateCustomerInvalidParameter.response.responseDescription  == "Invalid Request Parameters: TransactionId field is empty or missing"
+
+################################################################################
+#                                                                              #
+#                           CreateCustomerBadRequest                         #
+#                                                                              #
+################################################################################
+
+CreateCustomerBadRequest.response.status               == "400"
+CreateCustomerBadRequest.response.error                == "Bad Request"
+CreateCustomerBadRequest.response.message              == "Bad Request"

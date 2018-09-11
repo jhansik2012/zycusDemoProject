@@ -1,0 +1,14 @@
+To execute get config files
+---------------------------
+
+robot -d Reports -v TEST_DATA:TestData/DataSets.csv --prerunmodifier run.py:TestData/DataSets.csv GetConfigFiles.robot
+
+To execute upload customer
+---------------------------
+
+robot -d Reports -v TEST_DATA:TestData/DataSets.csv --prerunmodifier run.py:TestData/DataSets.csv UploadCustomer.robot
+
+To execute create customer
+---------------------------
+
+robot -d Reports -v TEST_DATA:TestData/DataSets.csv --prerunmodifier run.py:TestData/DataSets.csv CreateCustomer.robot

@@ -1,0 +1,29 @@
+################################################################################
+#                                                                              #
+#                                 UploadCustomer                             #
+#                                                                              #
+################################################################################
+
+UploadCustomer.response.responseCode         == "2000"
+UploadCustomer.response.responseStatus       == "Success"
+UploadCustomer.response.responseDescription  == "Successful Execution"
+
+################################################################################
+#                                                                              #
+#                         UploadCustomerInvalidParameter                     #
+#                                                                              #
+################################################################################
+
+UploadCustomerInvalidParameter.response.responseCode         == "1001"
+UploadCustomerInvalidParameter.response.responseStatus       == "Invalid Request Parameters"
+UploadCustomerInvalidParameter.response.responseDescription  == "Invalid Request Parameters: TransactionId field is empty or missing"
+
+################################################################################
+#                                                                              #
+#                           UploadCustomerBadRequest                         #
+#                                                                              #
+################################################################################
+
+UploadCustomerBadRequest.response.status               == "400"
+UploadCustomerBadRequest.response.error                == "Bad Request"
+UploadCustomerBadRequest.response.message              == "Bad Request"
