@@ -13,3 +13,4 @@ Using Robot framework reports generation.
 Provided bactch files to execute.
 Note : For all api's I used mock data setup.
 Environment details also we can gin in csv file.
+Used Batch files for execution from where ever we want.
